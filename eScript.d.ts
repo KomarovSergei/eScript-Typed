@@ -5,10 +5,12 @@
 declare function TheApplication():_App;
 
 // interfaces or types to enable escript typing -->
-declare interface BusObj {
-}
+// declare interface BusObj {
+// }
 
-declare type Service = any
+declare type chars = string;
+declare type BusObj = GetBusObject;
+declare type Service = any;
 // typing end <--
 
 // declare siebel consts -->
@@ -63,7 +65,7 @@ declare class _App {
     /** вызвать метод*/
     InvokeMethod(name: string): void | null | PropertySet;
     /** получить BO*/
-    GetBusObject(name: string): GetBusObject | null;
+    GetBusObject(name: string): BusObj | null;
     /** получить BS*/
     GetService(name: string): GetService | null;
     /** получить PS*/
