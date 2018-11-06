@@ -4,6 +4,7 @@
 /// <reference path="./Constants.ts" />
 /// <reference path="./Types.ts" />
 /// <reference path="./Service.ts" />
+/// <reference path="./PropertySet.ts" />
 
 declare function TheApplication():_App;
 
