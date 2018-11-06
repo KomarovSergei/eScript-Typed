@@ -1,45 +1,11 @@
 // Type definitions for [Siebel eScript] [0.0.1]
 // Project: [eScript-Typed]
 // Definitions by: [Komarov Sergei] <komarovs33@mail.ru>
+/// <reference path="./Constants.ts" />
+/// <reference path="./Types.ts" />
+/// <reference path="./Service.ts" />
 
 declare function TheApplication():_App;
-
-// interfaces or types to enable escript typing -->
-// declare interface BusObj {
-// }
-
-declare type chars = string;
-declare type BusObj = GetBusObject;
-declare type Service = any;
-// typing end <--
-
-// declare siebel consts -->
-//SetViewMode
-declare const SalesRepView: number;
-declare const OrganizationView: number;
-declare const ManagerView: number;
-declare const GroupView: number;
-declare const PersonalView: number;
-declare const CatalogView: number;
-declare const AllView: number;
-declare const SubOrganizationView: number;
-//ExecuteQuery constants
-declare let ForwardOnly: boolean;
-declare let ForwardBackward: boolean;
-declare let NewAfter: boolean;
-declare let NewBefore: boolean;
-// 
-/**переменная для продолжения выполнения скрипта */
-declare let ContinueOperation: boolean;
-/**переменная для прерывания выполнения скрипта */
-declare let CancelOperation: boolean;
-/** дефолтный PS на вход */
-declare let Inputs: PropertySet;
-/** дефолтный PS на выход */
-declare let Outputs: PropertySet;
-/** параметр имя метода */
-declare let Method: string;
-// end siebel consts <--
 
 // Main Siebel Class -->
 /**не использовать! только для внутреннего использования */
@@ -67,7 +33,7 @@ declare class _App {
     /** получить BO*/
     GetBusObject(name: string): BusObj | null;
     /** получить BS*/
-    GetService(name: string): GetService | null;
+    GetService(name: string): Service | null;
     /** получить PS*/
     NewPropertySet(): PropertySet;
 }
@@ -75,15 +41,8 @@ declare class _App {
 /**класс для Siebel BO */
 declare class GetBusObject{
     Name(): string | null;
+    /**для получения BC */
     GetBusComp(name: string): GetBusComp | null;
-}
-
-declare class GetService {
-    Name()
-    InvokeMethod()
-    PropertyExists()
-    GetProperty()
-    SetProperty()
 }
 
 declare class GetBusComp {
@@ -205,24 +164,4 @@ declare class GetAssocBusComp {
     ViewMode()
     WriteRecord()
 }
-
-declare class PropertySet {
-    PropertyExists()
-    GetProperty()
-    SetProperty()
-    GetValue()
-    SetValue()
-    GetType()
-    SetType()
-    Copy()
-    Reset()
-    GetChild()
-    AddChild()
-    RemoveChild()
-    RemoveProperty()
-    GetFirstProperty()
-    GetNextProperty()
-    GetPropertyCount()
-}
-
 // End Main Siebel Class <--
