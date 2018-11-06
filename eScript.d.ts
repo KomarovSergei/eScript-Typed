@@ -39,53 +39,6 @@ declare class _App {
     NewPropertySet(): PropertySet;
 }
 
-/**класс для Siebel BO */
-declare class GetBusObject{
-    Name(): string | null;
-    /**для получения BC */
-    GetBusComp(name: string): GetBusComp | null;
-}
-
-declare class GetBusComp {
-    Name()
-    ActivateField()
-    ActivateMultipleFields()
-    Associate()
-    ClearToQuery()
-    CountRecords()
-    DeactivateFields()
-    DeleteRecord()
-    ExecuteQuery()
-    FirstRecord()
-    GetAssocBusComp()
-    GetFieldValue()
-    GetFormattedFieldValue()
-    GetMVGBusComp(): GetMVGBusComp
-    GetNamedSearch()
-    GetPicklistBusComp()
-    GetSearchExpr()
-    GetSearchSpec()
-    GetViewMode()
-    InvokeMethod()
-    LastRecord()
-    NewRecord()
-    NextRecord()
-    ParentBusComp()
-    Pick()
-    PreviousRecord()
-    RefineQuery()
-    SearchExpr()
-    SetFieldValue()
-    SetFormattedFieldValue()
-    SetSearchSpec()
-    SetSearchExpr()
-    SetSortSpec()
-    SetViewMode()
-    UndoRecord()
-    ViewMode()
-    WriteRecord()
-}
-
 declare class GetMVGBusComp {
     Name()
     ActivateField()
