@@ -32,7 +32,7 @@ declare class _App {
     /** вызвать метод*/
     InvokeMethod(name: string): void | null | PropertySet;
     /** получить BO*/
-    GetBusObject(name: string): BusObj | null;
+    GetBusObject(name: string): BusObject | null;
     /** получить BS*/
     GetService(name: string): Service | null;
     /** получить PS*/
