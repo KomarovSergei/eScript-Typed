@@ -51,7 +51,7 @@ declare interface iPropertySet {
     Reset(): void
 
     /** Assigns a data value to a property in a property set */
-    SetProperty(propName: chars, propValue: chars): void
+    SetProperty(propName: chars, propValue: chars| BusObject | BusComp): void
 
     /** Assigns a data value to the type attribute of a property set */
     SetType(typeVal: chars): void

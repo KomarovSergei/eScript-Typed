@@ -9,10 +9,10 @@ declare const CatalogView: number;
 declare const AllView: number;
 declare const SubOrganizationView: number;
 //ExecuteQuery constants
-declare let ForwardOnly: boolean;
-declare let ForwardBackward: boolean;
-declare let NewAfter: boolean;
-declare let NewBefore: boolean;
+declare let ForwardOnly: number;
+declare let ForwardBackward: number;
+declare let NewAfter: number;
+declare let NewBefore: number;
 // 
 /**переменная для продолжения выполнения скрипта */
 declare let ContinueOperation: boolean;

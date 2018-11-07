@@ -90,8 +90,7 @@ declare interface iBusComp {
 
     /** Calls the specialized method or user-created method named in the
      *  argument*/
-    InvokeMethod(methodName: chars, param1: chars, param2: chars,
-        param3: chars, param4: chars, param10: chars): chars
+    InvokeMethod(methodName: chars, param1: chars): chars
 
     /** Moves to the last record in the business component */
     LastRecord(): bool
@@ -100,7 +99,7 @@ declare interface iBusComp {
     Name(): chars
 
     /** NewRecord adds a new record (row) to a Siebel business component */
-    NewRecord(cursorMode: float): void
+    NewRecord(cursorMode: string): void
 
     /** Moves the record pointer to the next record in the business component */
     NextRecord(): bool

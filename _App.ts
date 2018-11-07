@@ -33,8 +33,7 @@ declare interface _App {
 
     /** Calls a specialized method or user-defined method specified by
      *  its argument */
-    InvokeMethod(methodName: chars, param1: chars, param2: chars | null,
-        param10: chars | null): chars
+    InvokeMethod(methodName: chars, param1: chars | null, param2: chars | null): chars
 
     /** Returns the login id of the user who started the Siebel applications */
     LoginId(): chars
