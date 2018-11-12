@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
+let gulp = require('gulp'),
+    concat = require('gulp-concat');
  
 gulp.task('scripts', function() {
   return gulp.src('./src/*.ts')
