@@ -1,5 +1,5 @@
 //--------tests------
-var BO: BusObject = TheApplication().GetBusObject("");
+var BO: BusObject = TheApplication().LoginId();
 var svc: Service = TheApplication().GetService("");
 var psInput: PropertySet = TheApplication().NewPropertySet();
 var psOutput: PropertySet = TheApplication().NewPropertySet();
